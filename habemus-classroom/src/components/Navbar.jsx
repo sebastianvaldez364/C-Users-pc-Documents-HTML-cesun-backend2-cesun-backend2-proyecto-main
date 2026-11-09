@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { useAjustes } from '../context/useAjustes'
 import { useAuth } from '../context/AuthContext'
+import LectorVoz from './LectorVoz'
 
 function Navbar() {
   const { t } = useAjustes()
@@ -25,6 +26,8 @@ function Navbar() {
         <NavLink to="/tareas">{t('nav_tareas')}</NavLink>
         <NavLink to="/apoyo">{t('nav_apoyo')}</NavLink>
       </div>
+
+      <LectorVoz />
 
       <div className="profile-container">
         <button type="button" className="profile-button" onClick={() => setMenuAbierto(!menuAbierto)} aria-label="Abrir menu de usuario" aria-expanded={menuAbierto}>👤</button>
