@@ -1,25 +1,22 @@
 from django.contrib import admin
-
 from .models import Curso, Horario, Material, RecursoApoyo
 
 
 class HorarioInline(admin.TabularInline):
-    """Permite editar los horarios dentro del curso."""
-
     model = Horario
     extra = 1
 
 
 class MaterialInline(admin.TabularInline):
-    """Permite editar los materiales dentro del curso."""
-
     model = Material
     extra = 1
 
 
 @admin.register(Curso)
 class CursoAdmin(admin.ModelAdmin):
-    list_display = ("nombre", "codigo", "profesor", "modalidad")
+    list_display = ("nombre", "codigo", "profesor", "docente", "modalidad")
+    list_filter = ("docente", "modalidad")
+    filter_horizontal = ("alumnos",)
     inlines = [HorarioInline, MaterialInline]
 
 
