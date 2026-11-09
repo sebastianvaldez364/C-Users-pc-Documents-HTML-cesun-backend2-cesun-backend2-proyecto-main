@@ -3161,3 +3161,15 @@ main p {
 @media (max-width: 650px) {
   .lector-voz { order: 4; width: 100%; flex-wrap: wrap; }
 }
+
+.login-demo {
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-2);
+  color: var(--text-2);
+  font-size: 13px;
+}
+.login-demo strong { display: block; margin-bottom: 6px; }
+.login-demo p { margin: 3px 0; color: var(--text-2); }
+.login-demo small { display: block; margin-top: 7px; color: var(--muted); line-height: 1.4; }
