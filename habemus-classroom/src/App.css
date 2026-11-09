@@ -3138,3 +3138,26 @@ main p {
 }
 .login-card button:disabled { opacity: .6; cursor: wait; }
 .login-card .login-error { color: var(--danger); }
+
+
+/* Controles de lectura en voz alta */
+.lector-voz {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+}
+.lector-voz button {
+  padding: 7px 9px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: var(--surface-2);
+  color: var(--text-2);
+  font-size: 12px;
+  cursor: pointer;
+}
+.lector-voz button:disabled { opacity: .45; cursor: not-allowed; }
+.lector-estado { color: var(--muted); font-size: 11px; }
+@media (max-width: 650px) {
+  .lector-voz { order: 4; width: 100%; flex-wrap: wrap; }
+}
