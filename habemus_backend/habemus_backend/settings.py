@@ -46,6 +46,7 @@ INSTALLED_APPS = [
 
     # Permite crear APIs REST que serán consumidas por React.
     "rest_framework",
+    "rest_framework.authtoken",
 
     # Permite que React y Django se comuniquen
     # aunque estén ejecutándose en puertos diferentes.
@@ -234,11 +235,10 @@ CORS_ALLOWED_ORIGINS = [
 # desarrollando el primer avance del proyecto.
 
 REST_FRAMEWORK = {
-
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework.authentication.TokenAuthentication",
+    ],
     "DEFAULT_PERMISSION_CLASSES": [
-
-        "rest_framework.permissions.AllowAny",
-
-    ]
-
+        "rest_framework.permissions.IsAuthenticated",
+    ],
 }
