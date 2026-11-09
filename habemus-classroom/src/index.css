@@ -1,0 +1,164 @@
+/* ==========================================================
+   VARIABLES DE COLOR DE HABEMUS CLASSROOM
+   ==========================================================
+
+   Todos los colores de App.css salen de estas variables.
+   Hay cuatro combinaciones:
+
+   1. Claro                    (por defecto)
+   2. Modo noche               <html data-theme="dark">
+   3. Daltonismo               <html data-cb="on">
+   4. Daltonismo + modo noche  ambos atributos
+
+   La paleta para daltonismo usa los colores de Okabe e Ito
+   (azul, naranja y rosa), que se distinguen bien con
+   protanopía, deuteranopía y tritanopía. Así se evita la
+   combinación de rojo y verde.
+*/
+
+/* ---------- 1. Claro ---------- */
+
+:root {
+  color-scheme: light;
+
+  --bg: #f4f7fb;
+  --surface: #ffffff;
+  --surface-2: #f8fafc;
+  --border: #e2e8f0;
+
+  --text: #0f172a;
+  --text-2: #334155;
+  --muted: #64748b;
+
+  --accent: #2563eb;
+  --accent-dark: #1d4ed8;
+  --accent-text: #1d4ed8;
+  --accent-soft: #eff6ff;
+  --accent-soft-2: #dbeafe;
+  --accent-border: #bfdbfe;
+
+  --danger: #dc2626;
+  --danger-soft: #fef2f2;
+  --danger-border: #fecaca;
+
+  /* Segunda materia (morado) */
+  --c-purple: #7c3aed;
+  --c-purple-soft: #f5f3ff;
+  --c-purple-text: #6d28d9;
+
+  /* Tercera materia (verde) */
+  --c-green: #16a34a;
+  --c-green-soft: #f0fdf4;
+  --c-green-text: #15803d;
+}
+
+/* ---------- 2. Modo noche ---------- */
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --bg: #0b1220;
+  --surface: #111a2e;
+  --surface-2: #16213a;
+  --border: #26344f;
+
+  --text: #e6edf8;
+  --text-2: #c5d1e4;
+  --muted: #96a6c0;
+
+  --accent: #2563eb;
+  --accent-dark: #1d4ed8;
+  --accent-text: #93c5fd;
+  --accent-soft: #14264d;
+  --accent-soft-2: #1b3a73;
+  --accent-border: #284b8c;
+
+  --danger: #f87171;
+  --danger-soft: #3b1518;
+  --danger-border: #7f1d1d;
+
+  --c-purple: #8b5cf6;
+  --c-purple-soft: #241a47;
+  --c-purple-text: #c4b5fd;
+
+  --c-green: #22c55e;
+  --c-green-soft: #0f2a1b;
+  --c-green-text: #86efac;
+}
+
+/* ---------- 3. Daltonismo (claro) ---------- */
+
+:root[data-cb='on']:not([data-theme='dark']) {
+  /* Azul */
+  --accent: #0072b2;
+  --accent-dark: #005a8e;
+  --accent-text: #005a8e;
+  --accent-soft: #e6f1f8;
+  --accent-soft-2: #cfe4f2;
+  --accent-border: #9cc7e2;
+
+  /* La materia morada pasa a naranja */
+  --c-purple: #e69f00;
+  --c-purple-soft: #fdf3dc;
+  --c-purple-text: #8a5a00;
+
+  /* La materia verde pasa a rosa */
+  --c-green: #cc79a7;
+  --c-green-soft: #f9ecf3;
+  --c-green-text: #8a2f5f;
+
+  --danger: #b3261e;
+  --danger-soft: #fdecea;
+  --danger-border: #f3b8b3;
+}
+
+/* ---------- 4. Daltonismo + modo noche ---------- */
+
+:root[data-cb='on'][data-theme='dark'] {
+  --accent: #0072b2;
+  --accent-dark: #005a8e;
+  --accent-text: #7cc4ef;
+  --accent-soft: #0f2a3d;
+  --accent-soft-2: #163a54;
+  --accent-border: #1f5a82;
+
+  --c-purple: #e69f00;
+  --c-purple-soft: #3a2a07;
+  --c-purple-text: #f5c451;
+
+  --c-green: #cc79a7;
+  --c-green-soft: #351a29;
+  --c-green-text: #e9a8c9;
+
+  --danger: #f4907a;
+  --danger-soft: #3b1a14;
+  --danger-border: #7a2d1c;
+}
+
+/* ---------- Base ---------- */
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+/*
+  Los botones, selectores y campos usan el color de texto
+  del tema. :where() mantiene la especificidad en cero para
+  que las clases de App.css sigan teniendo prioridad.
+*/
+:where(button, select, input, textarea) {
+  color: var(--text);
+}
+
+/* Navegación con teclado: contorno visible en todos los temas. */
+:where(a, button, select, input):focus-visible {
+  outline: 3px solid var(--accent-border);
+  outline-offset: 2px;
+}

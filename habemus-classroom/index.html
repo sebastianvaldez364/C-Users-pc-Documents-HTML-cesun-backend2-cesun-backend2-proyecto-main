@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es" data-theme="light" data-cb="off">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Habemus Classroom</title>
+
+    <!--
+      Aplica el idioma, el modo noche y los colores para daltonismo
+      antes de que cargue React. Así la página no parpadea con los
+      colores claros al abrirla.
+    -->
+    <script>
+      try {
+        var raiz = document.documentElement;
+
+        raiz.setAttribute(
+          'data-theme',
+          localStorage.getItem('habemus.tema') === 'oscuro' ? 'dark' : 'light'
+        );
+
+        raiz.setAttribute(
+          'data-cb',
+          localStorage.getItem('habemus.daltonismo') === 'si' ? 'on' : 'off'
+        );
+
+        raiz.lang =
+          localStorage.getItem('habemus.idioma') === 'en' ? 'en' : 'es';
+      } catch (error) {
+        /* Sin almacenamiento local se usan los valores por defecto. */
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

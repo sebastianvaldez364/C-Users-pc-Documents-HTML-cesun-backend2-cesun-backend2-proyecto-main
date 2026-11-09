@@ -1,0 +1,3100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  width: 100%;
+  height: 72px;
+  background-color: var(--surface);
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 40px;
+
+  border-bottom: 1px solid var(--border);
+}
+
+/* LOGO */
+
+.navbar-logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--accent-text);
+
+  margin-right: 55px;
+}
+
+/* LINKS */
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+
+  flex: 1;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: var(--text-2);
+  font-size: 15px;
+  font-weight: 500;
+
+  transition: 0.2s;
+}
+
+.navbar-links a:hover {
+  color: var(--accent-text);
+}
+
+/* PERFIL */
+
+.profile-button {
+  width: 42px;
+  height: 42px;
+
+  border: none;
+  border-radius: 50%;
+
+  background-color: var(--accent-soft);
+
+  font-size: 20px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.profile-button:hover {
+  background-color: var(--accent-soft-2);
+}
+
+/* =========================
+   CONTENIDO
+========================= */
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 45px 30px;
+}
+
+main h1 {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+main p {
+  color: var(--muted);
+  font-size: 16px;
+}
+/* =========================
+   INICIO
+========================= */
+
+.home {
+  max-width: 1200px;
+  margin: auto;
+  padding: 45px 30px;
+}
+
+.welcome {
+  margin-bottom: 35px;
+}
+
+.welcome h1 {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.welcome p {
+  color: var(--muted);
+}
+
+
+/* =========================
+   RESUMEN
+========================= */
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+.summary-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+
+  padding: 25px;
+
+  display: flex;
+  gap: 20px;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.card-icon {
+  width: 50px;
+  height: 50px;
+
+  background: var(--accent-soft);
+  border-radius: 12px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 24px;
+}
+
+.card-label {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.summary-card h2 {
+  font-size: 20px;
+  margin-top: 8px;
+  margin-bottom: 6px;
+}
+
+.summary-card p {
+  color: var(--muted);
+  margin-bottom: 15px;
+}
+
+.summary-card button {
+  border: none;
+  background: none;
+
+  color: var(--accent-text);
+
+  font-size: 14px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+
+/* =========================
+   CURSOS
+========================= */
+
+.courses {
+  margin-top: 20px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+.section-header h2 {
+  font-size: 22px;
+}
+
+.see-all {
+  border: none;
+  background: none;
+
+  color: var(--accent-text);
+
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.courses-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+
+/* TARJETA DEL CURSO */
+
+.course-card {
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+
+  transition: 0.2s;
+}
+
+.course-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.course-header {
+  height: 80px;
+
+  background: var(--accent);
+
+  padding: 20px;
+
+  color: white;
+
+  display: flex;
+  align-items: flex-end;
+}
+
+.course-header span {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.course-content {
+  padding: 22px;
+}
+
+.course-content h3 {
+  font-size: 19px;
+  margin-bottom: 6px;
+}
+
+.teacher {
+  color: var(--muted);
+  font-size: 14px;
+
+  margin-bottom: 25px;
+}
+
+
+/* PROGRESO */
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 13px;
+  color: var(--text-2);
+
+  margin-bottom: 8px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 7px;
+
+  background: var(--border);
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  margin-bottom: 22px;
+}
+
+.progress {
+  height: 100%;
+
+  background: var(--accent);
+
+  border-radius: 20px;
+}
+
+
+/* BOTÓN CONTINUAR */
+
+.continue-button {
+  width: 100%;
+
+  padding: 10px;
+
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+
+  background: var(--surface);
+
+  color: var(--accent-text);
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.continue-button:hover {
+  background: var(--accent);
+  color: white;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 850px) {
+
+  .summary {
+    grid-template-columns: 1fr;
+  }
+
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+/* =========================
+   MENÚ DE PERFIL
+========================= */
+
+.profile-container {
+  position: relative;
+}
+
+.profile-menu {
+  position: absolute;
+
+  top: 55px;
+  right: 0;
+
+  width: 250px;
+
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+  border-radius: 12px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+
+  padding: 12px;
+
+  z-index: 1000;
+}
+
+
+/* INFORMACIÓN DEL USUARIO */
+
+.profile-info {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 10px;
+}
+
+.profile-avatar {
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  background: var(--accent-soft);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 20px;
+}
+
+.profile-info h4 {
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+
+.profile-info p {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+
+/* DIVISIÓN */
+
+.profile-divider {
+  height: 1px;
+
+  background: var(--border);
+
+  margin: 8px 0;
+}
+
+
+/* OPCIONES */
+
+.profile-option {
+  width: 100%;
+
+  border: none;
+  background: transparent;
+
+  text-align: left;
+
+  padding: 11px 12px;
+
+  border-radius: 7px;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.profile-option:hover {
+  background: var(--surface-2);
+}
+
+
+/* CERRAR SESIÓN */
+
+.logout {
+  color: var(--danger);
+}
+
+.logout:hover {
+  background: var(--danger-soft);
+}
+/* ==========================================
+   HABEMUS CLASSROOM
+   MÓDULO: HORARIOS
+========================================== */
+
+/* Contenedor principal de la página */
+.horarios-page {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 45px 30px;
+}
+
+/* Distribución de los días de la semana */
+.horarios-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 30px;
+}
+
+/* Tarjetas correspondientes a cada día */
+.horario-dia {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px;
+  min-height: 260px;
+}
+
+/* Encabezado del día */
+.horario-dia h2 {
+  font-size: 17px;
+  color: var(--accent-text);
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Tarjetas individuales de las clases */
+.horario-clase {
+  background-color: var(--accent-soft);
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 12px;
+}
+
+/* Nombre de la materia */
+.horario-clase h3 {
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+/* Nombre del profesor */
+.horario-clase p {
+  font-size: 13px;
+  color: var(--text-2);
+  margin-bottom: 12px;
+}
+
+/* Horario de inicio y finalización */
+.horario-clase span {
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--accent-text);
+}
+
+/* Resaltar la página activa del navbar */
+.navbar-links a.active {
+  color: var(--accent-text);
+  font-weight: bold;
+}
+
+/* Opciones que todavía no tienen página */
+.navbar-pending {
+  color: var(--muted);
+  font-size: 15px;
+  cursor: default;
+}
+
+/* Evita el subrayado del logotipo */
+.navbar-logo {
+  text-decoration: none;
+}
+
+/* Adaptación para tabletas */
+@media (max-width: 1100px) {
+  .horarios-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .navbar-logo {
+    margin-right: 25px;
+  }
+
+  .navbar-links {
+    gap: 15px;
+  }
+}
+
+/* Adaptación para teléfonos */
+@media (max-width: 650px) {
+  .horarios-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar {
+    height: auto;
+    min-height: 72px;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 15px;
+  }
+
+  .navbar-links {
+    order: 3;
+    flex-basis: 100%;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+
+  .profile-container {
+    margin-left: auto;
+  }
+}
+/* ==========================================
+   HABEMUS CLASSROOM
+   MÓDULO: CLASES
+========================================== */
+
+/*
+ * Contenedor principal de la página de clases.
+ * Mantiene el mismo ancho utilizado en las
+ * demás páginas de la plataforma.
+ */
+.clases-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 45px 30px;
+}
+
+
+/*
+ * Grid encargado de distribuir las tarjetas.
+ * En pantallas grandes se muestran tres columnas.
+ */
+.clases-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 30px;
+}
+
+
+/* Tarjeta principal de cada clase */
+.clase-card {
+  background-color: var(--surface);
+
+  border: 1px solid var(--border);
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+
+/* Efecto visual al colocar el cursor */
+.clase-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Encabezado azul de la tarjeta */
+.clase-card-header {
+  height: 95px;
+
+  background-color: var(--accent);
+  color: white;
+
+  padding: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+
+.clase-card-header span {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+
+/* Icono ubicado en el encabezado */
+.clase-icon {
+  width: 42px;
+  height: 42px;
+
+  background-color: rgba(255, 255, 255, 0.18);
+
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;
+}
+
+
+/* Información de la clase */
+.clase-card-content {
+  padding: 22px;
+}
+
+
+.clase-card-content h2 {
+  font-size: 20px;
+  margin-bottom: 7px;
+}
+
+
+.clase-profesor {
+  color: var(--muted);
+  font-size: 14px;
+
+  margin-bottom: 25px;
+}
+
+
+/* Contenedor de horario, modalidad y aula */
+.clase-details {
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+
+  margin-bottom: 25px;
+}
+
+
+.clase-details p {
+  color: var(--text-2);
+
+  font-size: 14px;
+
+  margin-top: 3px;
+}
+
+
+/* Nombre pequeño de cada dato */
+.detail-label {
+  color: var(--muted);
+
+  font-size: 11px;
+  font-weight: bold;
+
+  text-transform: uppercase;
+}
+
+
+/* Botón para acceder a la clase */
+.clase-button {
+  width: 100%;
+
+  padding: 11px;
+
+  border: none;
+  border-radius: 8px;
+
+  background-color: var(--accent);
+  color: white;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: background-color 0.2s;
+}
+
+
+.clase-button:hover {
+  background-color: var(--accent-dark);
+}
+
+
+/*
+ * Adaptación para pantallas medianas.
+ * Las tarjetas pasan de tres a dos columnas.
+ */
+@media (max-width: 900px) {
+
+  .clases-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/*
+ * Adaptación para teléfonos.
+ * Cada tarjeta ocupa una fila completa.
+ */
+@media (max-width: 600px) {
+
+  .clases-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+/* ==========================================
+   HABEMUS CLASSROOM
+   MÓDULO: CURSOS
+========================================== */
+
+/*
+ * Contenedor principal de la página.
+ */
+.cursos-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 45px 30px;
+}
+
+
+/* Encabezado */
+
+.cursos-title {
+  margin-bottom: 30px;
+}
+
+.cursos-title h1 {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.cursos-title p {
+  color: var(--muted);
+}
+
+
+/* ==========================================
+   HERRAMIENTAS
+========================================== */
+
+/*
+ * Contiene el buscador y el selector utilizado
+ * para ordenar los cursos.
+ */
+.cursos-tools {
+  display: flex;
+  gap: 15px;
+
+  margin-bottom: 25px;
+}
+
+
+/* Buscador */
+
+.curso-search {
+  width: 330px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  background-color: var(--surface);
+
+  border: 1px solid var(--border);
+  border-radius: 9px;
+
+  padding: 0 14px;
+}
+
+
+.curso-search input {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  padding: 12px 0;
+
+  font-size: 14px;
+
+  background: transparent;
+}
+
+
+/* Selector */
+
+.cursos-tools select {
+  border: 1px solid var(--border);
+
+  border-radius: 9px;
+
+  background-color: var(--surface);
+
+  padding: 0 15px;
+
+  color: var(--text-2);
+
+  cursor: pointer;
+}
+
+
+/* ==========================================
+   LISTA DE CURSOS
+========================================== */
+
+.cursos-list {
+  background-color: var(--surface);
+
+  border: 1px solid var(--border);
+  border-radius: 14px;
+
+  overflow: hidden;
+}
+
+
+/*
+ * Cada fila representa un curso.
+ */
+.curso-list-item {
+  min-height: 155px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 25px;
+
+  padding: 22px;
+
+  border-bottom: 1px solid var(--border);
+
+  transition: background-color 0.2s;
+}
+
+
+.curso-list-item:last-child {
+  border-bottom: none;
+}
+
+
+.curso-list-item:hover {
+  background-color: var(--surface-2);
+}
+
+
+/* ==========================================
+   IDENTIFICADOR VISUAL
+========================================== */
+
+.curso-list-image {
+  width: 170px;
+  height: 100px;
+
+  flex-shrink: 0;
+
+  border-radius: 12px;
+
+  background-color: var(--accent);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.curso-list-image span {
+  color: white;
+
+  font-size: 38px;
+  font-weight: bold;
+}
+
+
+/* ==========================================
+   INFORMACIÓN
+========================================== */
+
+.curso-list-info {
+  flex: 1;
+}
+
+
+.curso-code {
+  color: var(--muted);
+
+  font-size: 12px;
+}
+
+
+.curso-list-info h2 {
+  color: var(--accent-text);
+
+  font-size: 18px;
+
+  margin-top: 4px;
+  margin-bottom: 6px;
+}
+
+
+.curso-description {
+  color: var(--text-2);
+
+  font-size: 14px;
+
+  margin-bottom: 5px;
+}
+
+
+.curso-teacher {
+  color: var(--muted);
+
+  font-size: 13px;
+
+  margin-bottom: 14px;
+}
+
+
+/* ==========================================
+   PROGRESO
+========================================== */
+
+.curso-progress-container {
+  max-width: 450px;
+}
+
+
+.curso-progress-text {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 6px;
+
+  color: var(--text-2);
+
+  font-size: 12px;
+}
+
+
+.curso-list-progress-bar {
+  width: 100%;
+  height: 6px;
+
+  background-color: var(--border);
+
+  border-radius: 20px;
+
+  overflow: hidden;
+}
+
+
+.curso-list-progress {
+  height: 100%;
+
+  background-color: var(--accent);
+
+  border-radius: 20px;
+}
+
+
+/* ==========================================
+   BOTÓN
+========================================== */
+
+.curso-list-action {
+  flex-shrink: 0;
+}
+
+
+.curso-list-action button {
+  border: 1px solid var(--accent);
+
+  border-radius: 8px;
+
+  background-color: var(--surface);
+  color: var(--accent-text);
+
+  padding: 10px 16px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+
+.curso-list-action button:hover {
+  background-color: var(--accent);
+  color: white;
+}
+
+
+/* ==========================================
+   SIN RESULTADOS
+========================================== */
+
+.no-courses {
+  padding: 50px;
+
+  text-align: center;
+}
+
+
+.no-courses h3 {
+  margin-bottom: 8px;
+}
+
+
+.no-courses p {
+  color: var(--muted);
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 750px) {
+
+  .cursos-tools {
+    flex-direction: column;
+  }
+
+  .curso-search {
+    width: 100%;
+  }
+
+  .cursos-tools select {
+    padding: 12px;
+  }
+
+  .curso-list-item {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .curso-list-image {
+    width: 100%;
+  }
+
+  .curso-list-info {
+    width: 100%;
+  }
+
+  .curso-list-action {
+    width: 100%;
+  }
+
+  .curso-list-action button {
+    width: 100%;
+  }
+
+}
+/* ==========================================
+   ENLACES DE LAS TARJETAS DEL INICIO
+========================================== */
+
+/*
+ * Estilo utilizado por los enlaces de las tarjetas
+ * del dashboard, como "Ver tareas".
+ */
+.summary-link {
+  color: var(--accent-text);
+  font-size: 14px;
+  font-weight: bold;
+
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+.summary-link:hover {
+  text-decoration: underline;
+}
+/* ==========================================
+   HABEMUS CLASSROOM
+   MÓDULO: TAREAS
+========================================== */
+
+/*
+ * Contenedor principal.
+ */
+.tareas-page {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 45px 30px 70px;
+}
+
+
+/* ==========================================
+   ENCABEZADO
+========================================== */
+
+.tareas-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  gap: 30px;
+
+  margin-bottom: 30px;
+}
+
+
+.tareas-label {
+  display: block;
+
+  color: var(--accent-text);
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 1.4px;
+
+  margin-bottom: 8px;
+}
+
+
+.tareas-top h1 {
+  color: var(--text);
+
+  font-size: 32px;
+  font-weight: 700;
+
+  margin: 0 0 8px;
+}
+
+
+.tareas-top p {
+  color: var(--muted);
+
+  font-size: 15px;
+
+  margin: 0;
+}
+
+
+/* Filtro de materias */
+
+.tareas-filter {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+
+.tareas-filter label {
+  color: var(--muted);
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+.tareas-filter select {
+  min-width: 230px;
+
+  padding: 11px 38px 11px 14px;
+
+  border: 1px solid var(--border);
+  border-radius: 9px;
+
+  outline: none;
+
+  background-color: var(--surface);
+
+  color: var(--text-2);
+
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+
+.tareas-filter select:focus {
+  border-color: var(--accent);
+
+  box-shadow:
+    0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+/* ==========================================
+   CONTENEDOR DEL CALENDARIO
+========================================== */
+
+.habemus-calendar {
+  width: 100%;
+
+  background-color: var(--surface);
+
+  border: 1px solid var(--border);
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 8px 30px rgba(15, 23, 42, 0.06);
+}
+
+
+/* ==========================================
+   NAVEGACIÓN DEL MES
+========================================== */
+
+.calendar-navigation {
+  min-height: 90px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 28px;
+
+  border-bottom: 1px solid var(--border);
+}
+
+
+.calendar-current-month {
+  text-align: center;
+}
+
+
+.calendar-current-month span {
+  display: block;
+
+  color: var(--muted);
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  margin-bottom: 4px;
+}
+
+
+.calendar-current-month h2 {
+  color: var(--text);
+
+  font-size: 22px;
+
+  margin: 0;
+}
+
+
+.month-button {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--border);
+  border-radius: 10px;
+
+  background-color: var(--surface);
+
+  color: var(--accent-text);
+
+  font-size: 26px;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s,
+    border-color 0.2s;
+}
+
+
+.month-button:hover {
+  background-color: var(--accent-soft);
+
+  border-color: var(--accent-border);
+}
+
+
+/* ==========================================
+   ENCABEZADO DE LOS DÍAS
+========================================== */
+
+.calendar-week {
+  display: grid;
+
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+
+  background-color: var(--surface-2);
+
+  border-bottom: 1px solid var(--border);
+}
+
+
+.calendar-week div {
+  padding: 14px 8px;
+
+  color: var(--muted);
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.7px;
+
+  text-align: center;
+
+  border-right: 1px solid var(--border);
+}
+
+
+.calendar-week div:last-child {
+  border-right: none;
+}
+
+
+/* ==========================================
+   CUADRÍCULA DEL CALENDARIO
+========================================== */
+
+/*
+ * El calendario siempre utiliza siete columnas.
+ *
+ * aspect-ratio mantiene las casillas con una
+ * apariencia cuadrada.
+ */
+.calendar-boxes {
+  display: grid;
+
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+
+.calendar-box {
+  aspect-ratio: 1 / 0.88;
+
+  min-width: 0;
+
+  padding: 10px;
+
+  background-color: var(--surface);
+
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+
+  transition: background-color 0.2s;
+}
+
+
+.calendar-box:nth-child(7n) {
+  border-right: none;
+}
+
+
+.calendar-box:hover {
+  background-color: var(--surface-2);
+}
+
+
+/*
+ * Casillas que pertenecen al mes anterior.
+ */
+.calendar-box-empty {
+  background-color: var(--surface-2);
+}
+
+
+.calendar-box-empty:hover {
+  background-color: var(--surface-2);
+}
+
+
+/*
+ * Los días con actividades reciben un fondo
+ * azul extremadamente suave.
+ */
+.calendar-box-with-task {
+  background-color: var(--surface-2);
+}
+
+
+/* ==========================================
+   NÚMERO DEL DÍA
+========================================== */
+
+.calendar-box-header {
+  height: 28px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 6px;
+}
+
+
+.calendar-number {
+  width: 27px;
+  height: 27px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--text-2);
+
+  font-size: 12px;
+  font-weight: 600;
+
+  border-radius: 50%;
+}
+
+
+/*
+ * Pequeño indicador que muestra cuántas
+ * actividades existen ese día.
+ */
+.task-count {
+  min-width: 20px;
+  height: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 5px;
+
+  border-radius: 10px;
+
+  background-color: var(--accent-soft);
+
+  color: var(--accent-text);
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+
+/* ==========================================
+   TAREAS DENTRO DE LAS CASILLAS
+========================================== */
+
+.calendar-box-tasks {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+
+  min-width: 0;
+}
+
+
+/*
+ * Cada actividad funciona como un botón.
+ */
+.calendar-event {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 2px;
+
+  padding: 7px 8px;
+
+  border: none;
+  border-left: 3px solid;
+
+  border-radius: 6px;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.15s,
+    box-shadow 0.15s;
+}
+
+
+.calendar-event:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 3px 8px rgba(15, 23, 42, 0.08);
+}
+
+
+/* Nombre pequeño de la materia */
+
+.event-course {
+  width: 100%;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  opacity: 0.75;
+}
+
+
+/* Nombre de la actividad */
+
+.event-title {
+  width: 100%;
+
+  color: var(--text);
+
+  font-size: 10px;
+  font-weight: 600;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* Hora */
+
+.event-time {
+  color: var(--muted);
+
+  font-size: 8px;
+}
+
+
+/* ==========================================
+   COLORES DE LAS MATERIAS
+========================================== */
+
+/* Desarrollo Web */
+
+.event-azul {
+  background-color: var(--accent-soft);
+
+  border-left-color: var(--accent);
+}
+
+
+.event-azul .event-course {
+  color: var(--accent-text);
+}
+
+
+/* Base de Datos */
+
+.event-morado {
+  background-color: var(--c-purple-soft);
+
+  border-left-color: var(--c-purple);
+}
+
+
+.event-morado .event-course {
+  color: var(--c-purple-text);
+}
+
+
+/* Redes */
+
+.event-verde {
+  background-color: var(--c-green-soft);
+
+  border-left-color: var(--c-green);
+}
+
+
+.event-verde .event-course {
+  color: var(--c-green-text);
+}
+
+
+/* ==========================================
+   LEYENDA
+========================================== */
+
+.calendar-legend {
+  display: flex;
+  align-items: center;
+
+  gap: 25px;
+
+  margin-top: 18px;
+
+  color: var(--muted);
+
+  font-size: 12px;
+}
+
+
+.calendar-legend div {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+}
+
+
+.legend-dot {
+  width: 9px;
+  height: 9px;
+
+  display: block;
+
+  border-radius: 50%;
+}
+
+
+.legend-blue {
+  background-color: var(--accent);
+}
+
+
+.legend-purple {
+  background-color: var(--c-purple);
+}
+
+
+.legend-green {
+  background-color: var(--c-green);
+}
+
+
+/* ==========================================
+   FONDO DEL PANEL DE DETALLES
+========================================== */
+
+.task-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 1500;
+
+  background-color: rgba(15, 23, 42, 0.28);
+
+  backdrop-filter: blur(2px);
+}
+
+
+/* ==========================================
+   PANEL LATERAL
+========================================== */
+
+.task-panel {
+  position: fixed;
+
+  top: 0;
+  right: 0;
+
+  z-index: 1600;
+
+  width: 480px;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--surface);
+
+  box-shadow:
+    -15px 0 40px rgba(15, 23, 42, 0.18);
+
+  animation: abrirPanelTarea 0.25s ease;
+}
+
+
+@keyframes abrirPanelTarea {
+
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+
+}
+
+
+/* ==========================================
+   MATERIA
+========================================== */
+
+.task-course {
+  padding: 22px 26px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--accent),
+      var(--accent-dark)
+    );
+
+  color: #ffffff;
+}
+
+
+.task-course span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 1.3px;
+
+  opacity: 0.8;
+}
+
+
+.task-course h3 {
+  margin: 0;
+
+  font-size: 18px;
+}
+
+
+/* ==========================================
+   TÍTULO DE LA ACTIVIDAD
+========================================== */
+
+.task-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 20px;
+
+  padding: 24px 26px;
+
+  border-bottom: 1px solid var(--border);
+}
+
+
+.task-type {
+  display: block;
+
+  color: var(--accent-text);
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 1.2px;
+
+  margin-bottom: 7px;
+}
+
+
+.task-panel-header h2 {
+  color: var(--text);
+
+  font-size: 21px;
+
+  line-height: 1.35;
+
+  margin: 0;
+}
+
+
+.close-task {
+  width: 36px;
+  height: 36px;
+
+  flex-shrink: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  background-color: var(--surface-2);
+
+  color: var(--muted);
+
+  font-size: 23px;
+
+  cursor: pointer;
+}
+
+
+.close-task:hover {
+  background-color: var(--border);
+
+  color: var(--text);
+}
+
+
+/* ==========================================
+   CONTENIDO DEL PANEL
+========================================== */
+
+.task-panel-content {
+  flex: 1;
+
+  padding: 26px;
+
+  overflow-y: auto;
+}
+
+
+/* Tarjeta de fecha */
+
+.task-date-card {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 17px;
+
+  background-color: var(--surface-2);
+
+  border: 1px solid var(--border);
+  border-radius: 11px;
+}
+
+
+.task-date-icon {
+  width: 43px;
+  height: 43px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 10px;
+
+  background-color: var(--accent-soft);
+
+  color: var(--accent-text);
+
+  font-size: 22px;
+}
+
+
+.task-date-card span {
+  display: block;
+
+  color: var(--muted);
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.8px;
+
+  margin-bottom: 3px;
+}
+
+
+.task-date-card strong {
+  display: block;
+
+  color: var(--text-2);
+
+  font-size: 14px;
+}
+
+
+.task-date-card p {
+  color: var(--muted);
+
+  font-size: 12px;
+
+  margin: 3px 0 0;
+}
+
+
+/* ==========================================
+   DESCRIPCIÓN E INSTRUCCIONES
+========================================== */
+
+.task-information {
+  margin-top: 28px;
+}
+
+
+.task-information h3 {
+  color: var(--text);
+
+  font-size: 16px;
+
+  margin: 0 0 12px;
+}
+
+
+.task-information p {
+  color: var(--text-2);
+
+  font-size: 14px;
+
+  line-height: 1.7;
+
+  margin: 0;
+}
+
+
+.task-information ul {
+  padding-left: 20px;
+
+  margin: 0;
+}
+
+
+.task-information li {
+  color: var(--text-2);
+
+  font-size: 14px;
+
+  line-height: 1.6;
+
+  margin-bottom: 10px;
+}
+
+
+/* ==========================================
+   BOTÓN DEL PANEL
+========================================== */
+
+.task-panel-footer {
+  padding: 18px 26px;
+
+  border-top: 1px solid var(--border);
+}
+
+
+.task-panel-footer button {
+  width: 100%;
+
+  padding: 13px;
+
+  border: none;
+  border-radius: 9px;
+
+  background-color: var(--accent);
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: background-color 0.2s;
+}
+
+
+.task-panel-footer button:hover {
+  background-color: var(--accent-dark);
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 950px) {
+
+  /*
+   * Conservamos la forma del calendario.
+   * En pantallas pequeñas permitimos desplazamiento
+   * horizontal en lugar de destruir las casillas.
+   */
+  .habemus-calendar {
+    overflow-x: auto;
+  }
+
+
+  .calendar-navigation,
+  .calendar-week,
+  .calendar-boxes {
+    min-width: 900px;
+  }
+
+}
+
+
+@media (max-width: 650px) {
+
+  .tareas-page {
+    padding: 30px 18px 50px;
+  }
+
+
+  .tareas-top {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+
+  .tareas-filter select {
+    width: 100%;
+  }
+
+
+  .calendar-legend {
+    flex-wrap: wrap;
+  }
+
+
+  .task-panel {
+    width: 100%;
+  }
+
+}
+/* ==========================================================
+   CONEXIÓN CON EL BACKEND
+========================================================== */
+
+.backend-message {
+  margin: 0 0 20px;
+  padding: 14px 18px;
+
+  background-color: var(--accent-soft);
+  border: 1px solid var(--accent-border);
+  border-radius: 10px;
+
+  color: var(--accent-text);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.backend-error {
+  margin: 0 0 20px;
+  padding: 14px 18px;
+
+  background-color: var(--danger-soft);
+  border: 1px solid var(--danger-border);
+  border-radius: 10px;
+
+  color: var(--danger);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ==========================================================
+   NUEVAS FUNCIONES
+   - Colores por materia en las tarjetas
+   - Enlaces con aspecto de botón
+   - Calendario: día actual
+   - Página de la materia
+   - Detalle de tarea
+   - Apoyo
+   - Configuración
+========================================================== */
+
+/* ---------- Colores por materia ---------- */
+
+.color-morado .course-header,
+.color-morado .clase-card-header,
+.color-morado.curso-banner {
+  background: var(--c-purple);
+}
+
+.color-verde .course-header,
+.color-verde .clase-card-header,
+.color-verde.curso-banner {
+  background: var(--c-green);
+}
+
+/* ---------- Enlaces con aspecto de botón ---------- */
+
+.continue-link,
+.clase-link {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.clase-link {
+  color: #ffffff;
+}
+
+.clase-link:hover {
+  background-color: var(--accent-dark);
+}
+
+.continue-link:hover {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+.curso-list-action a {
+  display: inline-block;
+
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+
+  background-color: var(--surface);
+  color: var(--accent-text);
+
+  padding: 10px 16px;
+
+  font-weight: bold;
+  text-decoration: none;
+
+  transition: 0.2s;
+}
+
+.curso-list-action a:hover {
+  background-color: var(--accent);
+  color: #ffffff;
+}
+
+.task-panel-footer a {
+  display: block;
+
+  padding: 13px;
+
+  border-radius: 9px;
+
+  background-color: var(--accent);
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+
+  transition: background-color 0.2s;
+}
+
+.task-panel-footer a:hover {
+  background-color: var(--accent-dark);
+}
+
+.profile-option {
+  color: var(--text-2);
+}
+
+/* ---------- Calendario: día actual y botón de mes actual ---------- */
+
+.calendar-box-today {
+  box-shadow: inset 0 0 0 2px var(--accent);
+}
+
+.calendar-number-today {
+  background-color: var(--accent);
+  color: #ffffff;
+}
+
+.calendar-today-button {
+  margin-top: 6px;
+
+  border: none;
+  background: transparent;
+
+  color: var(--accent-text);
+
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: underline;
+
+  cursor: pointer;
+}
+
+/* ---------- Elementos comunes de las páginas nuevas ---------- */
+
+.volver-enlace {
+  display: inline-block;
+
+  margin-bottom: 20px;
+
+  color: var(--accent-text);
+
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.volver-enlace:hover {
+  text-decoration: underline;
+}
+
+.estado-vencida {
+  color: var(--danger);
+}
+
+.estado-pendiente {
+  color: var(--accent-text);
+}
+
+/* ---------- Página de la materia ---------- */
+
+.curso-pagina {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 40px 30px 70px;
+}
+
+.curso-banner {
+  padding: 30px 32px;
+  margin-bottom: 24px;
+
+  border-radius: 14px;
+
+  background: var(--accent);
+  color: #ffffff;
+}
+
+.curso-banner-codigo {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+
+  opacity: 0.9;
+}
+
+.curso-banner h1 {
+  margin-bottom: 8px;
+}
+
+.curso-banner p {
+  font-size: 14px;
+  opacity: 0.95;
+}
+
+.curso-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 24px;
+  align-items: start;
+}
+
+.curso-main,
+.curso-side {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.curso-card {
+  padding: 26px;
+
+  background-color: var(--surface);
+
+  border: 1px solid var(--border);
+  border-radius: 14px;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.curso-card h2 {
+  margin-bottom: 14px;
+
+  font-size: 18px;
+}
+
+.curso-card p {
+  color: var(--text-2);
+
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.curso-card h2:not(:first-child) {
+  margin-top: 26px;
+}
+
+.curso-competencia {
+  font-style: italic;
+}
+
+.curso-subtitulo {
+  margin: 24px 0 10px;
+
+  color: var(--muted);
+
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.proxima-clase {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 14px;
+
+  padding: 16px 18px;
+
+  background-color: var(--accent-soft);
+
+  border: 1px solid var(--accent-border);
+  border-left: 4px solid var(--accent);
+  border-radius: 10px;
+}
+
+.proxima-clase strong {
+  color: var(--accent-text);
+
+  font-size: 18px;
+}
+
+.proxima-clase span {
+  color: var(--text);
+
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.proxima-clase small {
+  color: var(--muted);
+
+  font-size: 13px;
+}
+
+.curso-horario {
+  list-style: none;
+}
+
+.curso-horario li {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 10px 12px;
+
+  border-bottom: 1px solid var(--border);
+
+  color: var(--text-2);
+
+  font-size: 14px;
+}
+
+.curso-horario li:last-child {
+  border-bottom: none;
+}
+
+.curso-horario .horario-siguiente {
+  background-color: var(--accent-soft);
+
+  border-radius: 8px;
+
+  color: var(--accent-text);
+
+  font-weight: 700;
+}
+
+.curso-lista {
+  list-style: none;
+}
+
+.curso-lista li {
+  border-bottom: 1px solid var(--border);
+}
+
+.curso-lista li:last-child {
+  border-bottom: none;
+}
+
+.curso-lista a,
+.curso-lista-sin-enlace {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 12px 6px;
+
+  border-radius: 8px;
+
+  color: inherit;
+  text-decoration: none;
+
+  transition: background-color 0.2s;
+}
+
+.curso-lista a:hover {
+  background-color: var(--surface-2);
+}
+
+.curso-lista a {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+}
+
+.curso-lista a.material-enlace {
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.curso-lista-titulo {
+  display: block;
+
+  color: var(--text);
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.curso-lista-fecha {
+  display: block;
+
+  color: var(--muted);
+
+  font-size: 12px;
+}
+
+.material-icono {
+  font-size: 20px;
+}
+
+.material-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.curso-vacio {
+  color: var(--muted);
+
+  font-size: 14px;
+}
+
+/* ---------- Detalle de tarea ---------- */
+
+.detalle-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 30px 70px;
+}
+
+.detalle-header {
+  margin-bottom: 24px;
+  padding: 28px 30px;
+
+  border: 1px solid var(--border);
+  border-left: 6px solid var(--accent);
+  border-radius: 14px;
+}
+
+.detalle-header.event-azul {
+  border-left-color: var(--accent);
+}
+
+.detalle-header.event-morado {
+  border-left-color: var(--c-purple);
+}
+
+.detalle-header.event-verde {
+  border-left-color: var(--c-green);
+}
+
+.detalle-materia {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: var(--accent-text);
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.detalle-header.event-morado .detalle-materia {
+  color: var(--c-purple-text);
+}
+
+.detalle-header.event-verde .detalle-materia {
+  color: var(--c-green-text);
+}
+
+.detalle-header h1 {
+  margin-bottom: 18px;
+
+  font-size: 28px;
+}
+
+.detalle-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 50px;
+}
+
+.detalle-meta span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: var(--muted);
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.detalle-meta strong {
+  font-size: 15px;
+}
+
+.detalle-card {
+  margin-bottom: 24px;
+  padding: 26px 30px;
+
+  background-color: var(--surface);
+
+  border: 1px solid var(--border);
+  border-radius: 14px;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.detalle-card h2 {
+  margin-bottom: 12px;
+
+  font-size: 18px;
+}
+
+.detalle-card h2:not(:first-child) {
+  margin-top: 24px;
+}
+
+.detalle-card p {
+  color: var(--text-2);
+
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.detalle-instrucciones {
+  padding-left: 22px;
+
+  color: var(--text-2);
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.subida-archivos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  padding: 30px 20px;
+
+  background-color: var(--surface-2);
+
+  border: 2px dashed var(--border);
+  border-radius: 12px;
+
+  opacity: 0.85;
+}
+
+.subida-icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 46px;
+  height: 46px;
+
+  border-radius: 50%;
+
+  background-color: var(--accent-soft);
+  color: var(--accent-text);
+
+  font-size: 22px;
+}
+
+.subida-texto {
+  font-weight: 600;
+}
+
+.subida-o {
+  color: var(--muted);
+
+  font-size: 13px;
+}
+
+.subida-boton {
+  padding: 9px 18px;
+
+  border: 1px solid var(--border);
+  border-radius: 8px;
+
+  background-color: var(--surface);
+
+  color: var(--muted);
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: not-allowed;
+}
+
+.subida-boton input {
+  display: none;
+}
+
+.subida-nota {
+  margin-top: 12px;
+
+  color: var(--muted) !important;
+
+  font-size: 13px !important;
+  text-align: center;
+}
+
+.detalle-entregar {
+  display: block;
+
+  width: 100%;
+  margin-top: 16px;
+  padding: 12px;
+
+  border: none;
+  border-radius: 9px;
+
+  background-color: var(--accent);
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* ---------- Apoyo ---------- */
+
+.apoyo-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 45px 30px 70px;
+}
+
+.apoyo-tools {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+
+  margin-bottom: 22px;
+}
+
+.apoyo-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.apoyo-tab {
+  padding: 9px 16px;
+
+  border: 1px solid var(--border);
+  border-radius: 999px;
+
+  background-color: var(--surface);
+
+  color: var(--text-2);
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.apoyo-tab:hover {
+  border-color: var(--accent);
+}
+
+.apoyo-tab-activa {
+  border-color: var(--accent);
+
+  background-color: var(--accent);
+  color: #ffffff;
+}
+
+.apoyo-tools select {
+  padding: 10px 14px;
+
+  border: 1px solid var(--border);
+  border-radius: 9px;
+
+  background-color: var(--surface);
+
+  font-size: 14px;
+}
+
+.apoyo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 22px;
+}
+
+.apoyo-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  padding: 24px;
+
+  background-color: var(--surface);
+
+  border: 1px solid var(--border);
+  border-top: 5px solid var(--accent);
+  border-radius: 14px;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.apoyo-accesibilidad {
+  border-top-color: var(--c-purple);
+}
+
+.apoyo-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.apoyo-badge {
+  padding: 4px 10px;
+
+  border-radius: 999px;
+
+  background-color: var(--accent-soft);
+  color: var(--accent-text);
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.apoyo-accesibilidad .apoyo-badge {
+  background-color: var(--c-purple-soft);
+  color: var(--c-purple-text);
+}
+
+.apoyo-categoria {
+  color: var(--muted);
+
+  font-size: 12px;
+  text-align: right;
+}
+
+.apoyo-card h2 {
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.apoyo-descripcion {
+  color: var(--text-2);
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.apoyo-datos {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  margin-top: auto;
+  padding-top: 12px;
+
+  border-top: 1px solid var(--border);
+}
+
+.apoyo-datos div {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+
+  font-size: 13px;
+}
+
+.apoyo-datos dt {
+  color: var(--muted);
+}
+
+.apoyo-datos dd {
+  color: var(--text-2);
+
+  font-weight: 600;
+  text-align: right;
+}
+
+.apoyo-enlace {
+  display: block;
+
+  padding: 10px;
+
+  border-radius: 8px;
+
+  background-color: var(--accent);
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* ---------- Configuración ---------- */
+
+.ajustes-page {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 45px 30px 70px;
+}
+
+.ajustes-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+
+  margin-bottom: 22px;
+  padding: 24px 28px;
+
+  background-color: var(--surface);
+
+  border: 1px solid var(--border);
+  border-radius: 14px;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.ajustes-columna {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+}
+
+.ajustes-seccion {
+  margin-bottom: 8px;
+
+  font-size: 18px;
+}
+
+.ajustes-fila {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+
+  padding: 18px 0;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.ajustes-texto h2,
+.ajustes-texto h3 {
+  margin-bottom: 4px;
+
+  font-size: 16px;
+}
+
+.ajustes-texto p {
+  max-width: 460px;
+
+  color: var(--muted);
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.ajustes-select {
+  min-width: 170px;
+
+  padding: 11px 14px;
+
+  border: 1px solid var(--border);
+  border-radius: 9px;
+
+  background-color: var(--surface);
+
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+.ajustes-switch {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  flex-shrink: 0;
+
+  padding: 5px 14px 5px 5px;
+
+  border: 1px solid var(--border);
+  border-radius: 999px;
+
+  background-color: var(--surface-2);
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.ajustes-switch-bolita {
+  display: block;
+
+  width: 22px;
+  height: 22px;
+
+  border-radius: 50%;
+
+  background-color: var(--muted);
+
+  transition: 0.2s;
+}
+
+.ajustes-switch-texto {
+  min-width: 78px;
+
+  font-size: 13px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.ajustes-switch-activo {
+  border-color: var(--accent);
+
+  background-color: var(--accent-soft);
+}
+
+.ajustes-switch-activo .ajustes-switch-bolita {
+  background-color: var(--accent);
+}
+
+.ajustes-muestras {
+  padding-top: 18px;
+}
+
+.ajustes-muestras-titulo {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: var(--muted);
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.ajustes-muestras div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.ajustes-muestra {
+  width: auto;
+  padding: 8px 14px;
+
+  cursor: default;
+}
+
+/* ---------- Adaptación a pantallas pequeñas ---------- */
+
+@media (max-width: 950px) {
+
+  .curso-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .ajustes-card,
+  .ajustes-fila {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 650px) {
+
+  .curso-pagina,
+  .detalle-page,
+  .apoyo-page,
+  .ajustes-page {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .apoyo-grid {
+    grid-template-columns: 1fr;
+  }
+}
