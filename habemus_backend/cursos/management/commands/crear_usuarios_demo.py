@@ -33,8 +33,9 @@ class Command(BaseCommand):
             docente.groups.add(docentes)
 
             curso.docente = docente
+            curso.profesor = docente.username
             curso.alumnos.add(alumno)
-            curso.save(update_fields=["docente"])
+            curso.save(update_fields=["docente", "profesor"])
 
             self.stdout.write(self.style.SUCCESS(
                 f"{curso.nombre}: {username} / 1234"
