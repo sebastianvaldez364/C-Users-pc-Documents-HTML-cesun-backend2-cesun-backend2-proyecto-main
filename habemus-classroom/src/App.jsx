@@ -1,12 +1,5 @@
 import './App.css'
-
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  Navigate
-} from 'react-router-dom'
-
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import Horarios from './pages/Horarios'
@@ -17,62 +10,42 @@ import Tareas from './pages/Tareas'
 import TareaDetalle from './pages/TareaDetalle'
 import Apoyo from './pages/Apoyo'
 import Ajustes from './pages/Ajustes'
+import Login from './pages/Login'
+import { useAuth } from './context/AuthContext'
 
-/**
- * Componente principal de Habemus Classroom.
- *
- * Define la estructura general de la aplicación y administra
- * las rutas principales mediante React Router.
- *
- * Las páginas se muestran debajo del Navbar sin necesidad
- * de recargar completamente el navegador.
- */
+function RutasProtegidas() {
+  const { usuario, cargando } = useAuth()
+
+  if (cargando) return <main aria-live="polite">Cargando sesion...</main>
+  if (!usuario) return <Navigate to="/login" replace />
+
+  return (
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/horarios" element={<Horarios />} />
+        <Route path="/clases" element={<Clases />} />
+        <Route path="/clases/:id" element={<CursoPagina />} />
+        <Route path="/cursos" element={<Cursos />} />
+        <Route path="/tareas" element={<Tareas />} />
+        <Route path="/tareas/:id" element={<TareaDetalle />} />
+        <Route path="/apoyo" element={<Apoyo />} />
+        <Route path="/configuracion" element={<Ajustes />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </>
+  )
+}
+
 function App() {
+  const { usuario, cargando } = useAuth()
 
   return (
     <BrowserRouter>
-
-      {/* Barra de navegación visible en todas las páginas */}
-      <Navbar />
-
-      {/*
-       * Sistema principal de rutas.
-       *
-       * Cada Route relaciona una URL con una página
-       * específica de Habemus Classroom.
-       */}
       <Routes>
-
-        {/* Dashboard principal */}
-        <Route path="/" element={<Home />} />
-
-        {/* Horario semanal del estudiante */}
-        <Route path="/horarios" element={<Horarios />} />
-
-        {/* Clases en las que está inscrito el estudiante */}
-        <Route path="/clases" element={<Clases />} />
-
-        {/* Página principal de una materia */}
-        <Route path="/clases/:id" element={<CursoPagina />} />
-
-        {/* Lista completa de cursos */}
-        <Route path="/cursos" element={<Cursos />} />
-
-        {/* Calendario de tareas */}
-        <Route path="/tareas" element={<Tareas />} />
-
-        {/* Asignación completa con descripción y entrega */}
-        <Route path="/tareas/:id" element={<TareaDetalle />} />
-
-        {/* Clases y cursos de apoyo */}
-        <Route path="/apoyo" element={<Apoyo />} />
-
-        {/* Idioma, modo noche y colores para daltonismo */}
-        <Route path="/configuracion" element={<Ajustes />} />
-
-        {/* Cualquier otra dirección regresa al inicio */}
-        <Route path="*" element={<Navigate to="/" replace />} />
-
+        <Route path="/login" element={cargando ? <main>Cargando...</main> : usuario ? <Navigate to="/" replace /> : <Login />} />
+        <Route path="/*" element={<RutasProtegidas />} />
       </Routes>
     </BrowserRouter>
   )
